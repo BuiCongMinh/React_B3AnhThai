@@ -5,13 +5,13 @@ class Footer extends React.Component {
         super (props); 
 
         // cách dùng state ở component classs
-        this.state = {
-            infor:'Minhvn',
-            user: {
-                name: 'Bùi Công Minh',
-                age: 21
-            }
-        }
+        // this.state = {
+        //     infor:'Minhvn',
+        //     user: {
+        //         name: 'Bùi Công Minh',
+        //         age: 21
+        //     }
+        // }
 
         // this.change = this.changeUser.bind(this)
         // this.newState = {
@@ -21,15 +21,15 @@ class Footer extends React.Component {
         //         number:12
         //     }
         // }
-        console.log(11,this);
-        console.log('===============');
+        // console.log(11,this);
+        // console.log('===============');
 
 
 
-        // cách setState trong class
-        this.change = ()=>{
-            this.setState({infor: 'An'})
-        }
+        // // cách setState trong class
+        // this.change = ()=>{
+        //     this.setState({infor: 'An'})
+        // }
 
         // this.changeNewState = ()=>{
         //     console.log(33);
@@ -42,10 +42,10 @@ class Footer extends React.Component {
     render() {
         return (
             <>
-                <button onClick={this.change}>change</button>  
+                {/* <button onClick={this.change}>change</button>   */}
                 <h1>this is footer</h1>
-                <h1>and helo : {this.props.user.userName}</h1>
-                <h1>đây là cách dùng state trong component classs: {this.state.infor}</h1>
+                {/* <h1>and helo : {this.props.user.userName}</h1> */}
+                {/* <h1>đây là cách dùng state trong component classs: {this.state.infor}</h1> */}
             </>
 
         )

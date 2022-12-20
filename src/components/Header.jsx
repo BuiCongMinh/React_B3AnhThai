@@ -2,7 +2,7 @@ import { useState } from "react"
 
 function Header(props) {
 
-    console.log(4, props);
+    // console.log(4, props);
     const [numberState, setNumBerState] = useState(props.test)
  
 
@@ -26,10 +26,10 @@ function Header(props) {
                     <button>đăng nhập </button>
                 </div>
             } */}
-            <button onClick={changeNumber}>ChangeNumber</button>
-            <button onClick={props.user}>change background</button>
+            {/* <button onClick={changeNumber}>ChangeNumber</button> */}
+            {/* <button onClick={props.user}>change background</button> */}
 
-            <h2>{numberState}</h2>
+            {/* <h2>{numberState}</h2> */}
 
         </>
     )

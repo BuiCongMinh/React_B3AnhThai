@@ -11,9 +11,16 @@ import bai1Data from '../data/bai1Data'
 import TodoModal from '../components/todolist/TodoModal';
 import TodoHeader from '../components/todolist/TodoHeader';
 import TodoList from '../components/todolist/TodoList';
+import Home from '../components/home/Home';
+import Walet from '../components/wailet/Walet';
 
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom'  //Thêm thư viện cho file
 import { useState } from 'react';
+import SingIn from '../components/signIn/SingIn';
+import Parent from '../components/Parent';
+import Children from '../components/Children';
+import Children2 from '../components/Children2';
+
 
 
 
@@ -21,30 +28,41 @@ import { useState } from 'react';
 function App() {  // component App() chỉ để làm logic
 
 
-  const [showModal, setShowModal] = useState(false)
-  const [changeIcon, setChangeIcon] = useState(false)
+  // const [showModal, setShowModal] = useState(false)
+  // const [changeIcon, setChangeIcon] = useState(false)
 
-  function changeModal() {
-    setShowModal(showModal? false:true)
-    setChangeIcon(changeIcon? false:true)
+  // function changeModal() {
+  //   setShowModal(showModal? false:true)
+  //   setChangeIcon(changeIcon? false:true)
+  // }
+
+  const [count, setCount] = useState(0)
+
+
+
+  
+  function ChangeCount() {
+    setCount(count + 1)
   }
 
   return (
-    <div className="App">
-      <TodoHeader changeModal={changeModal} changeIcon={changeIcon} />
+    <BrowserRouter>
 
-      <TodoList />
-      <TodoModal showModal={showModal} changeModal={changeModal} />
+      <Routes>
+        <Route path='/' element={<Parent />}>
+          <Route path='/' element={<Home count={count} ChangeCount={ChangeCount} />} />
+          <Route path='/parent' element={'test'} />
+          <Route path='/children' element={<Children />} />
+          <Route path='/children2' element={<Children2 />} />
+          <Route path='/todolist' element={<TodoList />} />
+          <Route path='/wailet' element={<Walet />} />
+        </Route>
 
+        
+        <Route path='/sing-in' element={<SingIn />} />
+      </Routes>
 
-
-      {/* header */}
-
-      {/* lisst hiển thị đata
-
-      modal để thêm sửa xoá */}
-
-    </div>
+    </BrowserRouter>
   );
 }
 

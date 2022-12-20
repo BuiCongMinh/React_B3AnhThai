@@ -1,0 +1,17 @@
+.container{
+  width: 500px;
+  margin: auto;
+}
+
+.dateExpense{
+  background: green;
+  color: yellow;
+}
+
+.bodyExpense{
+  text-align: right;
+}
+
+.bodyExItem{
+  justify-content: space-between;
+}
